@@ -27,4 +27,10 @@ jobs:
     - name: ls
       run: |
            cd bin/iPhoneSimulator
-           ls
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        # Artifact name
+        # A file, directory or wildcard pattern that describes what to upload
+        path: bin
+    
