@@ -25,4 +25,6 @@ jobs:
       run: msbuild MyIosApp.csproj /p:Configuration=Debug /p:Platform=iPhoneSimulator /t:Rebuild
       
     - name: ls
-      run: ls
+      run: |
+           cd bin
+           ls
