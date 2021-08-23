@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: nuget restore MyIosApp.sln
     - name: Build
-      run: msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="bin" /t:Build /p:BuildIpa=true MyIosApp.sln
+      run: msbuild /p:BuildIpa=true /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="bin" /t:Build MyIosApp.sln
 
 
     - name: ls
